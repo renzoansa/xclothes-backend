@@ -1,0 +1,49 @@
+{
+  "name": "xclothes-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --exec babel-node -- ./src/main.js",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.15.7",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.6",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.1",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-status-codes": "^2.1.4",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.10",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.0",
+    "passport-http": "^0.3.0",
+    "passport-http-bearer": "^1.0.1",
+    "stripe": "^8.186.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.{md,yml,yml,json}": [
+      "prettier --write"
+    ]
+  }
+}
