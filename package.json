@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon --exec babel-node -- ./src/main.js",
+    "build": "babel src --out-dir dist --presets=@babel/preset-env ",
+    "start": "NODE_ENV=production node main",
     "prepare": "husky install"
   },
-  "author": "",
+  "author": "Renzo anaya",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.16.0",
     "@babel/core": "^7.15.5",
     "@babel/eslint-parser": "^7.15.7",
     "@babel/node": "^7.15.4",
