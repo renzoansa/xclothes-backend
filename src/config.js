@@ -2,8 +2,8 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-const port = process.env.PORT;
-const host = process.env.HOST;
+const port = process.env.APP_PORT;
+const host = process.env.APP_HOST;
 const dbUsername = process.env.DB_USERNAME;
 const dbPassword = process.env.DB_PASSWORD;
 const dbHost = process.env.DB_HOST;
