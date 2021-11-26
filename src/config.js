@@ -15,7 +15,7 @@ export function isDevelopmentMode() {
   return process.env.NODE_ENV !== 'production';
 }
 
-export const getPort = () => port || '3000';
+export const getPort = () => port || '4000';
 
 export const getHost = () => host || '0.0.0.0';
 
