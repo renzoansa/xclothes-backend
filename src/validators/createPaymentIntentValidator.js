@@ -11,6 +11,7 @@ const createPaymentIntentValidator = Joi.object({
   address: Joi.string().required(),
   city: Joi.string().required(),
   country: Joi.string().required(),
+  returnUrl: Joi.string().required(),
 });
 
 export default createPaymentIntentValidator;

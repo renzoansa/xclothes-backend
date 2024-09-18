@@ -26,7 +26,8 @@ const calculateOrderAmount = async (checkoutItems) => {
 export const createPaymentIntent = async (
   paymentMethodId,
   checkoutItems,
-  formData
+  formData,
+  returnUrl
 ) => {
   const amount = await calculateOrderAmount(checkoutItems);
   await stripe.paymentIntents.create({
@@ -34,6 +35,7 @@ export const createPaymentIntent = async (
     currency: 'usd',
     payment_method: paymentMethodId,
     confirm: true,
+    return_url: returnUrl,
   });
   await Invoice.create({
     email: formData.email,
